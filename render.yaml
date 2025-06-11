@@ -1,7 +1,7 @@
 services:
-  - type: web
-    name: Fidler
-    env: node
+  - type: worker
+    name: websocket-server
+    runtime: node
     plan: free
     buildCommand: npm install
-    startCommand: npm start
+    startCommand: node websocket-server.js
